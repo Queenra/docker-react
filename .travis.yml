@@ -6,4 +6,4 @@ before_install:
  - docker build -t queenra/docker-react -f Dockerfile.dev .
  
 script:
- - docker run queenra/docker-react npm run test -- --coverage
+ - docker run -e CI=true queenra/docker-react npm run test
